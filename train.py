@@ -6,7 +6,7 @@ import random
 
 # === Config ===
 PROJECT = "wandb_continuos_test"
-ENTITY = "william-raccagni-unimore"  # oppure 'tuo_username' se non sei in un team
+ENTITY = "entity"  # oppure 'tuo_username' se non sei in un team
 RUN_NAME = "dummy-run"
 
 RESUME_FILE = "resume.json"
