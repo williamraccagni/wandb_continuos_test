@@ -35,11 +35,18 @@ Make sure you have a file named dummy_model.py in the same directory with the fo
 import random
 
 class DummyModel:
+    def __init__(self):
+        self.state = 0.0
+
     def train_step(self):
-        return random.uniform(0.0, 1.0)
+        loss = 1 / (self.state + 1) + random.uniform(-0.1, 0.1)
+        self.state += 1
+        return loss
 
     def validate(self):
-        return random.uniform(0.0, 1.0)
+        val_loss = 1 / (self.state + 2) + random.uniform(-0.1, 0.1)
+        return val_loss
+
 ```
 
 ## ⚙️ Configuration
